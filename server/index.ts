@@ -5,13 +5,11 @@ import compression from 'compression'
 import { renderPage } from 'vite-plugin-ssr/server'
 import { root } from './root.js'
 import  path  from "path";
-//const cwd = process.cwd();
 import _  from "lodash";
 import * as dotenv from 'dotenv'
 //import { typeOf, cwd } from 'pk-ts-node-lib';
 import { typeOf,   } from 'pk-ts-node-lib';
 export const cwd = process.cwd();
-import  dotenv  from 'dotenv';
 //@ts-ignore
 dotenv.config(path.join(cwd, ".env"));
 const isProduction = process.env.NODE_ENV === 'production'
@@ -24,6 +22,14 @@ async function startServer() {
   const app = express()
 
   app.use(compression())
+  app.get('api', async (req, res, next) => {
+    console.log("Got api");
+    return "Looking at API";
+  });
+  app.get('/api', async (req, res, next) => {
+    console.log("Got /api");
+    return "Looking at API";
+  });
 
   if (isProduction) {
     const sirv = (await import('sirv')).default

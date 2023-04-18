@@ -12,6 +12,7 @@ async function render(pageContext: PageContextClient) {
   hydrateRoot(
     document.getElementById('page-view')!,
     <PageShell pageContext={pageContext}>
+      <h1>Still Original</h1>
       <Page {...pageProps} />
     </PageShell>
   )
