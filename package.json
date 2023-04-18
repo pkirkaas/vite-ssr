@@ -1,0 +1,31 @@
+{
+  "scripts": {
+    "clean":"rm -rf ./package-lock.json ./dist ./node_modules",
+    "dev": "npm run server",
+    "prod": "npm run build && npm run server:prod",
+    "build": "vite build",
+    "server": "ts-node ./server/index.ts",
+    "server:prod": "cross-env NODE_ENV=production ts-node ./server/index.ts"
+  },
+  "dependencies": {
+    "@types/compression": "*",
+    "@types/express": "*",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@vitejs/plugin-react": "*",
+    "pk-ts-sqlite-lib": "git+https://github.com/pkirkaas/pk-ts-sqlite-lib.git#working",
+    "pk-ts-node-lib": "git+https://github.com/pkirkaas/pk-ts-node-lib.git#working",
+    "compression": "*",
+    "cross-env": "*",
+    "express": "*",
+    "react": "*",
+    "react-dom": "*",
+    "sirv": "*",
+    "ts-node": "*",
+    "typescript": "*",
+    "vite": "*",
+    "vite-plugin-ssr": "*"
+  },
+  "type": "module"
+}

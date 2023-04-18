@@ -1,0 +1,3 @@
+{
+  "extends" : "pk-ts-node-lib/tsconfig.json"
+}
