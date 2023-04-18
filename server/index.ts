@@ -28,11 +28,14 @@ async function startServer() {
   app.use(compression())
   app.get('api', async (req, res, next) => {
     console.log("Got api");
-    return "Looking at API";
+    //return "Looking at API";
+    return res.json({ body: "JSON" });
   });
   app.get('/api', async (req, res, next) => {
-    console.log("Got /api");
-    return "Looking at API";
+    console.log("Got /api + 1");
+    //return "Looking at API";
+    //return res.json({ body: "JSON2" });
+     res.json({ body: "JSON23" });
   });
 
   if (isProduction) {
