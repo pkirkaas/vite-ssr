@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "scripts": {
     "clean":"rm -rf ./package-lock.json ./dist ./node_modules",
     "dev": "npm run server",
@@ -16,16 +17,52 @@
     "@vitejs/plugin-react": "*",
     "pk-ts-sqlite-lib": "git+https://github.com/pkirkaas/pk-ts-sqlite-lib.git#working",
     "pk-ts-node-lib": "git+https://github.com/pkirkaas/pk-ts-node-lib.git#working",
+        "react-router-dom": "*",
     "compression": "*",
     "cross-env": "*",
     "express": "*",
     "react": "*",
+    "reactjs-popup": "*",
+    "sass": "*",
+   "styled-components": "*", 
     "react-dom": "*",
     "sirv": "*",
     "ts-node": "*",
     "typescript": "*",
     "vite": "*",
-    "vite-plugin-ssr": "*"
+    "vite-plugin-ssr": "*",
+     "@prisma/client": "*",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "cors": "*",
+    "dotenv": "*",
+    "eslint": "*",
+    "nodemon": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "@mui/material": "*",
+    "@popperjs/core": "*",
+    "bootstrap": "*",
+    "classnames": "*",
+    "formik": "*",
+    "yup": "*",
+    "react-bootstrap": "*",
+    "react-resizable-panels": "*"
+
   },
-  "type": "module"
+   "devDependencies": {
+    "prisma": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "@vitejs/plugin-react": "*",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-config-react-app": "*",
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "prettier": "*"
+  }
 }

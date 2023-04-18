@@ -1,7 +1,9 @@
 // Note that this file isn't processed by Vite, see https://github.com/brillout/vite-plugin-ssr/issues/562
 
-import express from 'express'
-import compression from 'compression'
+import express from 'express';
+import compression from 'compression';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 import { renderPage } from 'vite-plugin-ssr/server'
 import { root } from './root.js'
 import  path  from "path";
@@ -20,6 +22,8 @@ console.log({ typo });
 
 async function startServer() {
   const app = express()
+  app.use(bodyParser.json());
+  app.use(cors());
 
   app.use(compression())
   app.get('api', async (req, res, next) => {
